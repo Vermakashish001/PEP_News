@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Newsitem from './Newsitem'
-import "./App.css"
+// import "./News.css"
 export default function App() {
     const [data,setData] = useState([]);
-    const [search,setSearch] = useState("")
+    const [search,setSearch] = useState("india")
     const [page,setPage] = useState(1)
     const [totalPage,setTotalPages] = useState(1);
     const [condition,setCondition]= useState(true)
     const pageSize = 9;
     const fetchData = async()=>{
-        const data =await fetch(`https://newsapi.org/v2/everything?q=${search}&page=${page}&pageSize=${pageSize}&from=2023-12-20&sortBy=publishedAt&apiKey=af2eaad40b1940c7a82732643cef799a`)
+        const data =await fetch(`https://newsapi.org/v2/everything?q=${search}&page=${page}&pageSize=9&sortBy=publishedAt&apiKey=31ff7e91a28d485093a2c0e85efae4e4`)
         const response = await data.json();
         console.log(response)
         console.log(response)
