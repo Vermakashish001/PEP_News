@@ -3,7 +3,7 @@ import Newsitem from './Newsitem'
 // import "./News.css"
 export default function App() {
     const [data,setData] = useState([]);
-    const [search,setSearch] = useState("india")
+    const [search,setSearch] = useState("everything")
     const [page,setPage] = useState(1)
     const [totalPage,setTotalPages] = useState(1);
     const [condition,setCondition]= useState(true)
